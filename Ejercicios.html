@@ -114,6 +114,220 @@
         flex-direction: column;
           }
     }
+    /* Capítulo 8 */
+    .con-contorno {
+      outline: 3px dashed red;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .cursor-personalizado {
+      cursor: url('https://cdn-icons-png.flaticon.com/128/1086/1086933.png'), auto;
+      color: pink;
+    }
+    .scrollable-box {
+      width: 200px;
+      height: 100px;
+      overflow: auto;
+      scrollbar-width: thin;
+      scrollbar-color: pink;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .snap-container {
+      scroll-snap-type: y mandatory;
+      height: 150px;
+      overflow-y: scroll;
+      border: 2px solid #333;
+    }
+    .snap-item {
+      scroll-snap-align: start;
+      height: 150px;
+      background-color: #dfe6e9;
+      border-bottom: 1px solid #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 10px auto;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    ul.lista-ejemplo {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    ol.contador-ejemplo {
+      counter-reset: item;
+    }
+    ol.contador-ejemplo li {
+      counter-increment: item;
+    }
+    ol.contador-ejemplo li::before {
+      content: counters(item, ".") " ";
+      font-weight: bold;
+    }
+    /*Capítulo 9: Efectos */
+    /* 1. Sombras CSS en textos */
+    .texto-sombra {
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #222;
+    }
+    /* 2. Sombras CSS en cajas */
+    .caja-sombra {
+      background-color: #f0f0f0;
+      padding: 20px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    /* 3. Sombras idénticas (box-shadow múltiple) */
+    .sombra-multiple {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow:
+        2px 2px 5px rgba(0,0,0,0.3),
+        -2px -2px 5px rgba(0,0,0,0.3);
+      width: 300px;
+      margin-botoom: 20px;
+    }
+    /* 4. Pixel art con CSS */
+    .pixel-art {
+      widht: 50px;
+      height: 50px;
+      background-color: #000;
+      box-shadow:
+        10px 0 #000,
+        20px 0 #000,
+        0 10px #000,
+        10px 10px transparent,
+        20px 10px #000,
+        0 20px #000,
+        10px 20px #000,
+        20px 20px #000;
+      margin-bottom: 30px;
+    }
+    /* Capítulo 10 */
+    /* Transformaciones CSS */
+    .transform-box {
+      background-color: #61ecec;
+      padding: 20px;
+      width: 150px;
+      margin-bottom: 20px;
+      text-align: center;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    /* Translaciones 2D */
+    .translacion {
+      transform: translate(50px, 20px);
+      background-color: #fd79a8;
+    }
+    /* Rotaciones 2D */
+    .rotacion {
+      transform: rotate(20deg);
+      background-color: #74b9ff;
+    }
+    /* Escalado 2D */
+    .escalado {
+      transform: scale(1.5);
+      background-color: #55efc4;
+    }
+    /* Deformaciones 2D */
+    .deformacion {
+      transform: skew(20deg, 10deg);
+      background-color: #ffeaa7;
+    }
+    /* Transformaciones 3D */
+    .transformacion-3d {
+      widht: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      background-color: #fdcb6e;
+      transform-style: preserve-3d;
+      transform: rotateX(30deg) rotateY(20deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    /* Perspectivas */
+    .contenedor-perspectiva {
+      perspective: 400px;
+      margin.bottom: 30px;
+    }
+    .cubo {
+      width: 100px;
+      height: 100px;
+      background-color: #00cec9;
+      transform-style: preserve-3d;
+      transform: rotateY(45deg);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-weight: bold;
+    }
+    /* Capítulo 11 */
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animacion-girar {
+      display: inline-block;
+      padding: 20px;
+      background-color: #0984e3;
+      color: blue;
+      border-radius: 10px;
+      animation: girar 3s linear infinite;
+      margin-bottom: 20px;
+    }
+    /* Transición suave */
+    .transicion-suave {
+      width: 150px;
+      height: 150px;
+      background-color: #d63031;
+      border-radius: 10px;
+      transition: background-color 0.5s ease, transform 0.5s ease;
+      margin-bottom: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: red;
+      font-weight: bold;
+    }
+    .transicion-suave:hover {
+      background-color: #e17055;
+      transform: scale(1.2);
+    }
+    /* Animacion con keyframes múltiples */
+    @keyframes moverY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .animacion-mover {
+      width: 100px;
+      height: 100px;
+      background-color: #00b894;
+      border-radius: 50%;
+      animation: moverY 2s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+    
+      
+    
+      
   </style>
 </head>
 <body>
