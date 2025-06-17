@@ -49,6 +49,29 @@
       background-color: #75d5ed;
     }
    /* Lógica CSS */
+     @supports (display: grid){
+    .logico {
+        display: grid;
+        grid-template-columns: repeat(3, 1 fr)
+        gap: 10px;
+        text-aling: center;
+   }
+   }
+  . responsive-text {
+    front-size: clamp(1rem, 2.5vw, 2rem)
+  }
+    /* Selectores CSS */
+    nav ul li:first-child a {
+      font-weight: bold;
+  }
+  button:not(.deshabilitado) {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      margin-right: 10px;
+      border: none;
+      cursor: pointer;
+  }
     
    
  </style>
